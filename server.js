@@ -5,7 +5,7 @@ var path = require('path');
 var app = express();
 app.use(morgan('combined'));
 var articles={
-    'articleone':{
+    'article-one':{
     tile:'Article-one',
     heading:'Article-one',
     date:'11-Sep-17',
@@ -13,7 +13,7 @@ var articles={
                 Content of first article
             </p>`
     },
-    'articletwo':{
+    'article-two':{
     tile:'Article-Two',
     heading:'Article-Two',
     date:'12-Sep-17',
@@ -21,13 +21,15 @@ var articles={
                 Content of first article
             </p>`
     },
-    'articlethree':{
+    'article-three':{
     tile:'Article-Three',
     heading:'Article-Three',
     date:'13    -Sep-17',
     content:`<p>
                 Content of first article
-            </p>`}
+            </p>`
+        
+    }
 };
 
 function createTemplate(data){
@@ -59,9 +61,6 @@ function createTemplate(data){
                     </div>
                 </body>
         </html>
-        
-        
-        
         `;
         return htmlTemplate;
 }
@@ -69,7 +68,7 @@ function createTemplate(data){
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
-app.get('/:article-Name',function(req,res){
+app.get('/:articleName',function(req,res){
     //articleName will be articleone ,it is express feature
     var articleName=req.params.articleName;
     //params is the express feature
