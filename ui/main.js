@@ -15,12 +15,12 @@ var nameInput=document.getElementById('name');
 var name_1=nameInput.value;
 var submit=document.getElementById('submit_btn');
 submit.onclick=function(){
-    var names=['name1','name2','name3']
+    var names=['name1','name2','name3'];
     var list='';
-    for(var i3=0,i3<names.length;i3++){
+    for(var i3=0;i3<names.length;i3++){
         list+='<li>'+names[i3]+'</li>';
     }
-    var ul=document.getElementById('namelist')
+    var ul=document.getElementById('namelist');
     ul.innerHTML=list;
 };
 
