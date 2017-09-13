@@ -17,23 +17,23 @@ submit.onclick=function(){
     var request=new XMLHttpRequest();
     request.onreadystatechange=function(){
         if(request.readyState===XMLHttpRequest.DONE){
-        if(request.state===200){
-             var names=request.responseText;
-             names=JSON.parse(names);
-             var list='';
-            for(var i3=0;i3<names.length;i3++){
-                list+='<li>'+names[i3]+'</li>';
-                }
-            var ul=document.getElementById('namelist');
-            ul.innerHTML=list;
+             if(request.state===200){
+                 var names=request.responseText;
+                names=JSON.parse(names);
+                var list='';
+                for(var i3=0;i3<names.length;i3++){
+                    list+='<li>' + names[i3] + '</li>';
+                    }
+                var ul=document.getElementById('namelist');
+                ul.innerHTML=list;
             
-        }
-    }
+                }
+            }
     };
    
    
 var nameInput=document.getElementById('name');
-var name_1=nameInput.value;
-request.open('GET','http://sasivaya1231996.imad.hasura-app.io/submit-name?name='+name_1,true);
-reques.send(null);
+var name5=nameInput.value;
+request.open('GET','http://sasivaya1231996.imad.hasura-app.io/submit-name?name=' + name5,true);
+request.send(null);
 };
