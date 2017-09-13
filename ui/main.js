@@ -11,7 +11,7 @@ madi.onclick = function (){
     var interval=setInterval(moveRight,50);
     madi.style.marginLeft ='100px';  
 };
-var nameInput=document.getElementById('name');
+var nameInput=document.getElementById('nname');
 var nname=nameInput.value;
 var submit=document.getElementById('submit_btn');
 submit.onclick=function(){
