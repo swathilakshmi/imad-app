@@ -11,7 +11,8 @@ madi.onclick = function (){
     var interval=setInterval(moveRight,50);
     madi.style.marginLeft ='100px';  
 };
-
+var nameInput=document.getElementById('name');
+var name5=nameInput.value;
 var submit=document.getElementById('submit_btn');
 submit.onclick=function(){
     var request=new XMLHttpRequest();
@@ -32,8 +33,7 @@ submit.onclick=function(){
     };
    
    
-var nameInput=document.getElementById('name');
-var name5=nameInput.value;
+
 request.open('GET','http://sasivaya1231996.imad.hasura-app.io/submit-name?name=' + name5,true);
 request.send(null);
 };
