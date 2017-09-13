@@ -11,3 +11,10 @@ madi.onclick = function (){
     var interval=setInterval(moveRight,50);
     madi.style.marginLeft ='100px';  
 };
+var nameinput=document.getElementById('name')
+var name=nameinput.value;
+var submit=document.getElementById('submit_btn')
+submit.onclick=function(){
+    
+};
+
